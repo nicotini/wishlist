@@ -50,6 +50,7 @@
 }
 .wishlist-delete {
     background-color: rgba(252, 8, 8, 0.918);
+    border-radius: 50%;
 }
 .wishlist-button i {
     color: #fff;
