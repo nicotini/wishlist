@@ -13,4 +13,5 @@ class Wishlist extends Model
 
     protected $table = 'wishlists';
     protected $guarded = false;
+    protected $fillable = ['title'];
 }

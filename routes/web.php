@@ -1,6 +1,11 @@
 <?php
 
+use App\Models\Wishlist;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Wishlist\IndexController as WishlistIndexController;
+use App\Http\Controllers\Wishlist\StoreController as WishlistStoreController;
+use App\Http\Controllers\Wishlist\UpdateController as WishlistUpdateController;
+use App\Http\Controllers\Wishlist\DestroyController as WishlistDestroyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +18,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
+Route::group([], function() {
+    Route::get('/', WishlistIndexController::class)->name('index');
+    Route::post('/', WishlistStoreController::class)->name('store');
+    Route::patch('/{wishlist}', WishlistUpdateController::class)->name('update');
+    Route::delete('/{wishlist}', WishlistDestroyController::class)->name('delete');
 });
