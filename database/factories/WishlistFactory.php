@@ -19,7 +19,6 @@ class WishlistFactory extends Factory
         return [
             'title' => fake()->sentence(1),
             'created_at' => fake()->dateTimeThisMonth()->format('Y-m-d H:i:s'),
-            
         ];
     }
 }
