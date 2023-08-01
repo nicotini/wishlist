@@ -46,14 +46,4 @@ function handleSelectAllClick() {
 
 selectAllCheckbox.addEventListener("click", handleSelectAllClick);
 
-/* document.addEventListener("DOMContentLoaded", function () {
-    const modalButtons = document.querySelectorAll(".wishlist-button");
-    modalButtons.forEach((button) => {
-        button.addEventListener("click", (event) => {
-            const modalTarget = button.getAttribute("data-bs-target");
-            const id = modalTarget.split("-")[1];
-            const modalTitleElement = document.getElementById("modalTitle");
-            const modalIdElement = document.getElementById("modalId");
-        });
-    });
-}); */
+
