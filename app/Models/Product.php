@@ -6,17 +6,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Wishlist extends Model
+class Product extends Model
 {
     use HasFactory;
     use SoftDeletes;
-
-    protected $table = 'wishlists';
+    protected $table = 'products';
     protected $guarded = false;
-    protected $fillable = ['title'];
-
-    public function products()
+    public function wishlists()
     {
-        return $this->belongsToMany(Product::class, 'wishlist_products', 'wishlist_id', 'product_id');
+        return $this->belongsToMany(Wishlist::class, 'wishlist_products', 'product_id', 'wishlist_id');
     }
 }
